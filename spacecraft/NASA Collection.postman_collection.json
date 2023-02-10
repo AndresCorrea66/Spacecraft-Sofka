@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "520659ff-2aba-4803-8083-05c94bd40dff",
+		"name": "NASA Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "608978"
+	},
+	"item": [
+		{
+			"name": "supplySpacecraft",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"spacecraftType\": \"MANNED\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/spacecrafts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"spacecrafts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/spacecrafts/search?keywords=space",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"spacecrafts",
+						"search"
+					],
+					"query": [
+						{
+							"key": "keywords",
+							"value": "space"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search by speed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/spacecrafts/search-by-speed?minSpeed=150&maxSpeed=350",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"spacecrafts",
+						"search-by-speed"
+					],
+					"query": [
+						{
+							"key": "minSpeed",
+							"value": "150"
+						},
+						{
+							"key": "maxSpeed",
+							"value": "350"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/spacecrafts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"spacecrafts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
